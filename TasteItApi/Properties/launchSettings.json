@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:38457",
+      "sslPort": 44378
+    }
+  },
+  "profiles": {
+    "TasteItApi": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "NEO_URL": "neo4j+s:/dc95b24b.databases.neo4j.io",
+        "NEO_PASSWORD": "sBQ6Fj2oXaFltjizpmTDhyEO9GDiqGM1rG-zelf17kg",
+        "NEO_USER": "neo4j",
+        "GOOGLE_APPLICATION_CREDENTIALS": "./firebase-config.json"
+      },
+      "applicationUrl": "https://localhost:7076;http://localhost:5269",
+      "dotnetRunMessages": true
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "GOOGLE_APPLICATION_CREDENTIALS": "./firebase-config.json"
+      }
+    }
+  }
+}

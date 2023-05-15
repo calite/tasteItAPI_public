@@ -1,0 +1,15 @@
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\TasteItApi.exe
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\TasteItApi.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\TasteItApi.deps.json
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\TasteItApi.runtimeconfig.json
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\TasteItApi.pdb
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Neo4j.Driver.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Neo4jClient.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Newtonsoft.Json.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\proyectos\vs-projects\TasteItApi\TasteItApi\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

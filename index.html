@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TasteIt API - public</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 800px;
+            height: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .endpoint {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .endpoint h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .endpoint p {
+            margin-bottom: 5px;
+        }
+
+        .endpoint a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+
+        .endpoint a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>TasteIt API - documentación</h1>
+
+        <h2>Endpoints:</h2>
+        <div class="endpoint">
+            <h3>GET /public/recipes/all</h3>
+            <p>Obtiene todas las recetas disponibles en la API.</p>
+            <p>No acepta parámetros adicionales.</p>
+            <a href="/public/recipes/all">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/all/{skipper:int}</h3>
+            <p>Obtiene todas las recetas disponibles en la API con paginación.</p>
+            <p>Acepta el parámetro opcional 'skipper' para indicar el número de recetas a saltar.</p>
+            <a href="/public/recipes/all/{skipper:int}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/{id:int}</h3>
+            <p>Obtiene una receta específica por su ID.</p>
+            <p>Acepta el parámetro obligatorio 'id' para indicar el ID de la receta.</p>
+            <a href="/public/recipes/{id:int}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/random/{limit}</h3>
+            <p>Obtiene recetas aleatorias de la API.</p>
+            <p>Acepta el parámetro obligatorio 'limit' para indicar el número máximo de recetas a obtener.</p>
+            <a href="/public/recipes/random/{limit}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/byname/{name}/{skipper}</h3>
+            <p>Busca recetas por nombre.</p>
+            <p>Acepta el parámetro obligatorio 'name' para seguir buscando por nombre y el parámetro opcional 'skipper'
+                para paginar los resultados.</p>
+            <a href="/public/recipes/byname/{name}/{skipper}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/bycountry/{country}/{skipper}</h3>
+            <p>Busca recetas por país.</p>
+            <p>Acepta el parámetro obligatorio 'country' para especificar el país y el parámetro opcional 'skipper' para
+                paginar los resultados.</p>
+            <a href="/public/recipes/bycountry/{country}/{skipper}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/byingredients/{ingredients}/{skipper}</h3>
+            <p>Busca recetas por ingredientes.</p>
+            <p>Acepta el parámetro obligatorio 'ingredients' para especificar los ingredientes separados por comas y el
+                parámetro opcional 'skipper' para paginar los resultados.</p>
+            <a href="/public/recipes/byingredients/{ingredients}/{skipper}">Más información</a>
+        </div>
+
+        <div class="endpoint">
+            <h3>GET /public/recipes/bytags/{tags}/{skipper}</h3>
+            <p>Busca recetas por etiquetas.</p>
+            <p>Acepta el parámetro obligatorio 'tags' para especificar las etiquetas separadas por comas y el parámetro
+                opcional 'skipper' para paginar los resultados.</p>
+            <a href="/public/recipes/bytags/{tags}/{skipper}">Más información</a>
+        </div>
+
+        <h2>Enlace a Swagger:</h2>
+        <a href="/swagger">Abrir Swagger</a>
+
+    </div>
+</body>
+
+</html>

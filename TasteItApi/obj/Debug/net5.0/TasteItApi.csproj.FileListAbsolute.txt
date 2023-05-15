@@ -1,0 +1,9 @@
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.csproj.AssemblyReference.cache
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.Properties.Resources.resources
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.csproj.GenerateResource.cache
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.AssemblyInfoInputs.cache
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.AssemblyInfo.cs
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.csproj.CoreCompileInputs.cache
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.MvcApplicationPartsAssemblyInfo.cs
+D:\proyectos\git\tasteItAPI\TasteItApi\obj\Debug\net5.0\TasteItApi.MvcApplicationPartsAssemblyInfo.cache
