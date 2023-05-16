@@ -249,5 +249,103 @@ namespace TasteItApi.Controllers
             return Ok(listRecipesFiltered.ToList());
         }
 
+        [HttpGet("/public/recipes/search")]
+        public async Task<ActionResult<Recipe>> GetRecipesFiltered(string? name, string? country, int? difficulty, int? rating, string? ingredients, string? tags)
+        {
+            List<string> listIng = new List<string>();
+            List<string> listTags = new List<string>();
+
+            if (ingredients != null)
+            {
+                listIng = ingredients.Replace(" ", "").Split(",").ToList();
+            }
+
+            if (tags != null)
+            {
+                listTags = tags.Replace(" ", "").Split(",").ToList();
+            }
+
+            var result = await _client.Cypher
+                .Match("(recipe:Recipe)-[c:Created]-(user:User)")
+                .Where("($name IS NULL OR toLower(recipe.name) CONTAINS toLower($name))")
+                .AndWhere("($country IS NULL OR toLower(recipe.country) CONTAINS toLower($country))")
+                .AndWhere("($difficulty IS NULL OR recipe.difficulty = $difficulty)")
+                .AndWhere("($rating IS NULL OR recipe.rating = $rating)")
+                .WithParam("name", name)
+                .WithParam("country", country)
+                .WithParam("difficulty", difficulty)
+                .WithParam("rating", rating)
+                .Return((recipe, user) => new
+                {
+                    RecipeId = recipe.Id(),
+                    Recipe = recipe.As<Recipe>()
+                })
+                .OrderBy("recipe.dateCreated desc")
+                .ResultsAsync;
+
+            var recipes = result.ToList();
+
+            List<Object> listRecipesFiltered = new List<Object>();
+
+            if (listIng.Count > 0 && listTags.Count == 0) // Filtrar solo por ingredientes
+            {
+                for (int i = 0; i < recipes.Count; i++)
+                {
+                    bool hasMatch = recipes[i].Recipe.ingredients.Any(x => listIng.Any(y => x.ToLower().Contains(y.ToLower())));
+
+                    if (hasMatch)
+                    {
+                        listRecipesFiltered.Add(new 
+                        {
+                            recipes[i].RecipeId,
+                            Recipe = recipes[i].Recipe.As<Recipe>()
+                        });
+                    }
+                }
+            }
+            else if (listTags.Count > 0 && listIng.Count == 0) // Filtrar solo por tags
+            {
+                for (int i = 0; i < recipes.Count; i++)
+                {
+                    bool hasMatch = recipes[i].Recipe.tags.Any(x => listTags.Any(y => x.ToLower().Contains(y.ToLower())));
+
+                    if (hasMatch)
+                    {
+                        listRecipesFiltered.Add(new
+                        {
+                            recipes[i].RecipeId,
+                            Recipe = recipes[i].Recipe.As<Recipe>(),
+                        });
+                    }
+                }
+            }
+            else if (listIng.Count > 0 && listTags.Count > 0) // Filtrar por ingredientes y tags
+            {
+                for (int i = 0; i < recipes.Count; i++)
+                {
+                    bool hasIngredientMatch = recipes[i].Recipe.ingredients.Any(x => listIng.Any(y => x.ToLower().Contains(y.ToLower())));
+                    bool hasTagMatch = recipes[i].Recipe.tags.Any(x => listTags.Any(y => x.ToLower().Contains(y.ToLower())));
+
+                    if (hasIngredientMatch && hasTagMatch)
+                    {
+                        listRecipesFiltered.Add(new 
+                        {
+                            RecipeId = recipes[i].RecipeId,
+                            Recipe = recipes[i].Recipe.As<Recipe>(),
+                        });
+                    }
+                }
+            }
+
+            if (listRecipesFiltered.Count > 0)
+            {
+                return Ok(listRecipesFiltered);
+            }
+            else
+            {
+                return Ok(recipes);
+            }
+        }
+
     }
 }
