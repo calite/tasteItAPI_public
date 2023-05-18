@@ -1,26 +1,42 @@
 {
   "format": 1,
   "restore": {
-    "D:\\proyectos\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj": {}
+    "C:\\Users\\Practicas.soporte\\Desktop\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj": {}
   },
   "projects": {
-    "D:\\proyectos\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj": {
+    "C:\\Users\\Practicas.soporte\\Desktop\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\proyectos\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj",
+        "projectUniqueName": "C:\\Users\\Practicas.soporte\\Desktop\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj",
         "projectName": "TasteItApi",
-        "projectPath": "D:\\proyectos\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj",
-        "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "D:\\proyectos\\git\\tasteItAPI_public\\TasteItApi\\obj\\",
+        "projectPath": "C:\\Users\\Practicas.soporte\\Desktop\\git\\tasteItAPI_public\\TasteItApi\\TasteItApi.csproj",
+        "packagesPath": "C:\\Users\\Practicas.soporte\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Practicas.soporte\\Desktop\\git\\tasteItAPI_public\\TasteItApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\Offline Packages",
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Practicas.soporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress .NET Core Desktop 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 21.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 19.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.2\\.NET Core Desktop Libraries\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 21.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -55,8 +71,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.311\\RuntimeIdentifierGraph.json"
         }
       }
     }
