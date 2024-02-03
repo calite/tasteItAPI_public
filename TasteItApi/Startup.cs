@@ -28,7 +28,8 @@ namespace TasteItApi
             services.AddCors(); //cors
             
             //NEO
-            var client = new BoltGraphClient(new Uri("neo4j+s://dc95b24b.databases.neo4j.io"), "neo4j", "sBQ6Fj2oXaFltjizpmTDhyEO9GDiqGM1rG-zelf17kg");
+            //var client = new BoltGraphClient(new Uri("neo4j+s://dc95b24b.databases.neo4j.io"), "neo4j", "sBQ6Fj2oXaFltjizpmTDhyEO9GDiqGM1rG-zelf17kg");
+            var client = new BoltGraphClient(new Uri("neo4j+s://102356e3.databases.neo4j.io"), "neo4j", "YSuwlPSExYwct5r7StSu9gSNDKW9hPm8hhjXu4fXWpE");
             client.ConnectAsync();
             services.AddSingleton<IGraphClient>(client);
 
